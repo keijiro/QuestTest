@@ -123,6 +123,22 @@
       },
       "url": "https://packages.unity.com"
     },
+    "jp.keijiro.klak.lineargradient": {
+      "version": "1.0.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.metatex": {
+      "version": "1.0.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "jp.keijiro.klak.lineargradient": "1.0.2"
+      },
+      "url": "https://registry.npmjs.com"
+    },
     "com.unity.modules.androidjni": {
       "version": "1.0.0",
       "depth": 0,
