@@ -549,7 +549,6 @@ GameObject:
   - component: {fileID: 966304495}
   - component: {fileID: 966304494}
   - component: {fileID: 966304497}
-  - component: {fileID: 966304496}
   - component: {fileID: 966304498}
   m_Layer: 0
   m_Name: Particles
@@ -668,21 +667,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &966304496
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966304492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdfea1f838247c40921a07afedde962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Property:
-    m_Name: Current Transform
-  Target: {fileID: 1113324294}
 --- !u!114 &966304497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +681,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
   m_Bindings:
-  - {fileID: 966304496}
   - {fileID: 966304498}
   m_VisualEffect: {fileID: 966304495}
 --- !u!114 &966304498
@@ -712,7 +695,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99fee9f8c24f4d54c915d854ca1a3833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _property:
+  _currentProperty:
+    m_Name: Current Transform
+  _previousProperty:
     m_Name: Previous Transform
   _target: {fileID: 1113324294}
 --- !u!1 &1020255744
@@ -1073,7 +1058,6 @@ GameObject:
   - component: {fileID: 1486739289}
   - component: {fileID: 1486739288}
   - component: {fileID: 1486739291}
-  - component: {fileID: 1486739290}
   - component: {fileID: 1486739292}
   m_Layer: 0
   m_Name: Particles
@@ -1192,21 +1176,6 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!114 &1486739290
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486739286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdfea1f838247c40921a07afedde962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Property:
-    m_Name: Current Transform
-  Target: {fileID: 240615750}
 --- !u!114 &1486739291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,7 +1190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
   m_Bindings:
-  - {fileID: 1486739290}
   - {fileID: 1486739292}
   m_VisualEffect: {fileID: 1486739289}
 --- !u!114 &1486739292
@@ -1236,7 +1204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99fee9f8c24f4d54c915d854ca1a3833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _property:
+  _currentProperty:
+    m_Name: Current Transform
+  _previousProperty:
     m_Name: Previous Transform
   _target: {fileID: 240615750}
 --- !u!1 &1534440061
