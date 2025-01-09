@@ -1,16 +1,14 @@
 {
   "dependencies": {
-    "com.unity.render-pipelines.universal": "12.1.7",
-    "com.unity.visualeffectgraph": "12.1.7",
-    "com.unity.xr.oculus": "3.2.1",
-    "com.unity.xr.openxr": "1.5.3",
-    "jp.keijiro.metatex": "1.0.4",
-    "jp.keijiro.vfxgraphassets": "1.1.2",
+    "com.unity.inputsystem": "1.11.2",
+    "com.unity.render-pipelines.universal": "17.0.3",
+    "com.unity.xr.oculus": "4.4.0",
+    "jp.keijiro.vfxgraphassets": "3.7.0",
     "com.unity.modules.androidjni": "1.0.0"
   },
   "scopedRegistries": [
     {
-      "name": "keijiro",
+      "name": "Keijiro",
       "url": "https://registry.npmjs.com",
       "scopes": [
         "jp.keijiro"
