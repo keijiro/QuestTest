@@ -3,7 +3,7 @@
     "com.unity.inputsystem": "1.11.2",
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.xr.oculus": "4.4.0",
-    "jp.keijiro.vfxgraphassets": "3.7.0",
+    "jp.keijiro.vfxgraphassets": "3.8.0",
     "com.unity.modules.androidjni": "1.0.0"
   },
   "scopedRegistries": [

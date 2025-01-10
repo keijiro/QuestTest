@@ -171,6 +171,50 @@ Transform:
   - {fileID: 1489876275}
   m_Father: {fileID: 841388073}
   m_LocalEulerAnglesHint: {x: -30, y: -10, z: 0}
+--- !u!1 &384178167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384178169}
+  - component: {fileID: 384178168}
+  m_Layer: 0
+  m_Name: App Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &384178168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384178167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f071f35c815d4442874eb91bce63689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &384178169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384178167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515825118
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +846,7 @@ GameObject:
   - component: {fileID: 1489876275}
   - component: {fileID: 1489876277}
   - component: {fileID: 1489876276}
+  - component: {fileID: 1489876279}
   - component: {fileID: 1489876278}
   m_Layer: 0
   m_Name: Flame
@@ -885,7 +930,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: Throttle
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -908,6 +956,37 @@ VisualEffect:
       m_Array: []
 --- !u!114 &1489876278
 MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489876274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25f1ccb7695589aaaa3a46c31579265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Property:
+    m_Name: Throttle
+  Action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 63010b85-527b-48a9-99f0-900dd9da5629
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 94030c8a-34ce-4433-aef4-da6b0cde0b4c
+      m_Path: <XRController>{RightHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &1489876279
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -915,26 +994,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1489876274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b339ee0d8675dea448ae23149bf5120f, type: 3}
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trigger:
-    m_Name: Trigger
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a100ff4e-0575-466a-abc3-c68ef66a6258
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: cef3e433-6231-4aa9-8766-f24744924dc5
-      m_Path: <XRController>{RightHand}/trigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Trigger
-      m_Flags: 0
-    m_Flags: 0
+  m_ExecuteInEditor: 1
+  m_Bindings:
+  - {fileID: 1489876278}
+  m_VisualEffect: {fileID: 1489876277}
 --- !u!1 &1501475734
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +1012,7 @@ GameObject:
   - component: {fileID: 1501475735}
   - component: {fileID: 1501475737}
   - component: {fileID: 1501475736}
+  - component: {fileID: 1501475739}
   - component: {fileID: 1501475738}
   m_Layer: 0
   m_Name: Flame
@@ -1029,7 +1096,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: Throttle
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -1052,6 +1122,37 @@ VisualEffect:
       m_Array: []
 --- !u!114 &1501475738
 MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501475734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25f1ccb7695589aaaa3a46c31579265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Property:
+    m_Name: Throttle
+  Action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3aabf688-936e-4f1f-a9a7-32e3eb04e0cc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5773a866-ea6d-4958-bbba-94fa67e3852d
+      m_Path: <XRController>{LeftHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &1501475739
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1059,26 +1160,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1501475734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b339ee0d8675dea448ae23149bf5120f, type: 3}
+  m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trigger:
-    m_Name: Trigger
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a100ff4e-0575-466a-abc3-c68ef66a6258
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: cef3e433-6231-4aa9-8766-f24744924dc5
-      m_Path: <XRController>{LeftHand}/trigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Trigger
-      m_Flags: 0
-    m_Flags: 0
+  m_ExecuteInEditor: 1
+  m_Bindings:
+  - {fileID: 1501475738}
+  m_VisualEffect: {fileID: 1501475737}
 --- !u!1 &1598478239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1388,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 384178169}
   - {fileID: 841388073}
   - {fileID: 1204019500}
   - {fileID: 1898715814}
